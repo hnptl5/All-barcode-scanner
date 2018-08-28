@@ -25,4 +25,12 @@
     </platform>
     <plugin name="cordova-plugin-barcodescanner" version="0.7.4" />
     <plugin name="cordova-plugin-inappbrowser" version="3.0.0" />
+    <plugin name="cordova-plugin-camera" version="4.0.3" />
+    <plugin name="cordova-plugin-compat" version="1.2.0" />
+    <plugin name="cordova-plugin-device" version="2.0.2" />
+    <plugin name="cordova-plugin-media-capture" version="3.0.2" />
+    <plugin name="cordova-plugin-file" version="6.0.1" />
+    <plugin name="cordova-plugin-remote-injection" version="0.5.2" />
+    <plugin name="cordova-plugin-statusbar" version="2.4.2" />
+    <plugin name="cordova-plugin-splashscreen" version="5.0.2" />
 </widget>
