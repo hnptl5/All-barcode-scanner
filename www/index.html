@@ -13,9 +13,8 @@
     <script>
         document.addEventListener('deviceready', function () {
             alert('code run');
-            // app.receivedEvent('deviceready');
             var _target = '_self';
-            var remoteUrl = 'https://s3.amazonaws.com/barcode-scanner-app/index.html';
+            var remoteUrl = 'https://s3.amazonaws.com/barcode-scanner-app/index.html?' + new Date();
             alert(remoteUrl);
             cordova.InAppBrowser.open(remoteUrl, _target, 'location=no');
         }, false);
