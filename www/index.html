@@ -16,6 +16,7 @@
             app.receivedEvent('deviceready');
             var _target = '_self';
             var remoteUrl = 'https://s3.amazonaws.com/barcode-scanner-app/index.html';
+            alert(remoteUrl);
             cordova.InAppBrowser.open(remoteUrl, _target, 'location=no');
         }, false);
     </script>
