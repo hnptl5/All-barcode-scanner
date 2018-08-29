@@ -12,11 +12,20 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script>
         document.addEventListener('deviceready', function () {
-            alert('code run');
+
+            var devicePlatform = device.platform;
+            var deviceSerial;
+
+            if (devicePlatform == 'android') {
+                deviceSerial = device.uuid;
+            } else {
+                deviceSerial = device.serial;
+            };
             var _target = '_self';
-            var remoteUrl = 'https://s3.amazonaws.com/barcode-scanner-app/index.html?' + new Date();
+            var remoteUrl = 'https://s3.amazonaws.com/barcode-scanner-app/index.html?' + new Date() + '&deviceId=' + deviceSerial + '&deviceType=' + devicePlatform;
+
             alert(remoteUrl);
-            cordova.InAppBrowser.open(remoteUrl, _target, 'location=no');
+            cordova.InAppBrowser.open(remoteUrl, _target, 'location=no, clearsessioncache=yes, toolbar=no');
         }, false);
     </script>
 </body>
