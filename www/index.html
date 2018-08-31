@@ -22,7 +22,7 @@
                 deviceSerial = device.serial;
             };
             var _target = '_self';
-            var remoteUrl = 'https://s3.amazonaws.com/barcode-scanner-app/index.html?' + new Date() + '&deviceId=' + deviceSerial + '&deviceType=' + devicePlatform;
+            var remoteUrl = 'http://angular-app-phonegap.s3-website-us-east-1.amazonaws.com?' + new Date() + '&deviceId=' + deviceSerial + '&deviceType=' + devicePlatform;
 
             alert(remoteUrl);
             cordova.InAppBrowser.open(remoteUrl, _target, 'location=no, clearsessioncache=yes, toolbar=no');
